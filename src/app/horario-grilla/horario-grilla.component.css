@@ -11,7 +11,8 @@ td {
 }
 
 .celda {
-    height: 35px;
+    height: 50px;
+    /* Puedes agregar más estilos personalizados para las celdas */
 }
 
 thead th {
