@@ -1,0 +1,50 @@
+<table mat-table [dataSource]="horarios" class="mat-elevation-z8">
+    <ng-container matColumnDef="hora">
+        <th mat-header-cell *matHeaderCellDef> Hora </th>
+        <td mat-cell *matCellDef="let horario"> {{horario.horas}} </td>
+    </ng-container>
+    <!-- Repite para los demás días de la semana -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <table mat-table [dataSource]="horarios" class="mat-elevation-z8">
+
+        <!-- Columna de Hora -->
+        <ng-container matColumnDef="hora">
+            <th mat-header-cell *matHeaderCellDef> Hora </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.horas}} </td>
+        </ng-container>
+
+        <!-- Columna de Lunes -->
+        <ng-container matColumnDef="lunes">
+            <th mat-header-cell *matHeaderCellDef> Lunes </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.lunes}} </td>
+        </ng-container>
+
+        <!-- Columna de Martes -->
+        <ng-container matColumnDef="martes">
+            <th mat-header-cell *matHeaderCellDef> Martes </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.martes}} </td>
+        </ng-container>
+
+        <!-- Columna de Miércoles -->
+        <ng-container matColumnDef="miercoles">
+            <th mat-header-cell *matHeaderCellDef> Miércoles </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.miercoles}} </td>
+        </ng-container>
+
+        <!-- Columna de Jueves -->
+        <ng-container matColumnDef="jueves">
+            <th mat-header-cell *matHeaderCellDef> Jueves </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.jueves}} </td>
+        </ng-container>
+
+        <!-- Columna de Viernes -->
+        <ng-container matColumnDef="viernes">
+            <th mat-header-cell *matHeaderCellDef> Viernes </th>
+            <td mat-cell *matCellDef="let horario"> {{horario.viernes}} </td>
+        </ng-container>
+
+        <!-- Definir los encabezados y las filas -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
