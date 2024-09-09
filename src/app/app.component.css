@@ -1,0 +1,9 @@
+/* app.component.css o main-section.component.css */
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para centrar verticalmente */
+    text-align: center;
+  }
+  

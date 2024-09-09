@@ -1,1 +1,9 @@
-<p>horarios works!</p>
+<!-- horarios.component.html -->
+<mat-select [(value)]="selectedDay" (selectionChange)="onDaySelected($event)">
+    <mat-option value="all">Todos los días</mat-option>
+    <mat-option value="lunes">Lunes</mat-option>
+    <mat-option value="martes">Martes</mat-option>
+    <mat-option value="miercoles">Miércoles</mat-option>
+    <mat-option value="jueves">Jueves</mat-option>
+    <mat-option value="viernes">Viernes</mat-option>
+</mat-select>

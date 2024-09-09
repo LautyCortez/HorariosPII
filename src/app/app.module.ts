@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from './material/material.component';
-import { HorarioGrillaComponent } from './horario-grilla/horario-grilla.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,6 +16,10 @@ import { AdministrarMateriasComponent } from './administrar-materias/administrar
 import { ConvertidorFechasComponent } from './convertidor-fechas/convertidor-fechas.component';
 import { HorarioTableComponent } from './horario-table/horario-table.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 
 
@@ -24,7 +27,6 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     AppComponent,
     MaterialComponent,
-    HorarioGrillaComponent,
     HeaderComponent,
     NavbarComponent,
     SidebarComponent,
@@ -43,6 +45,10 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatListModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

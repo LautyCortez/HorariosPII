@@ -1,16 +1,9 @@
-import { TestBed } from '@angular/core/testing';
-
-import { HorariosService } from './horarios.service';
-
-describe('HorariosService', () => {
-  let service: HorariosService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(HorariosService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+// horario.model.ts
+export interface Horario {
+  hora: string; // Cambia de horas a hora, tipo string
+  lunes: string;
+  martes: string;
+  miercoles: string;
+  jueves: string;
+  viernes: string;
+}

@@ -1,3 +1,4 @@
+// horarios.service.ts
 import { Injectable } from '@angular/core';
 import { Horario } from '../horario.model';
 
@@ -6,7 +7,8 @@ import { Horario } from '../horario.model';
 })
 export class HorariosService {
   private horariosMaterias: Horario[] = [
-    // Aquí irían los datos de horarios
+    { hora: '8:00 AM', lunes: 'PP 2', martes: '', miercoles: '', jueves: 'Programación 2', viernes: 'Programación 2' },
+    // Agrega más horarios aquí
   ];
 
   obtenerHorarios(): Horario[] {
