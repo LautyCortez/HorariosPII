@@ -1,17 +1,16 @@
 <table>
     <thead>
-        <tr>
-            <th></th>
-            <th *ngFor="let dia of dias">{{ dia }}</th>
-        </tr>
+      <tr>
+        <th></th>
+        <th *ngFor="let dia of dias">{{ dia }}</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let hora of horas">
-            <td>{{ hora }}</td>
-            <td *ngFor="let dia of dias">
-                <!-- Aquí puedes agregar lógica para cada celda -->
-                <div class="celda"></div>
-            </td>
-        </tr>
+      <tr *ngFor="let hora of horas">
+        <td>{{ hora }}</td>
+        <td *ngFor="let dia of dias">
+          <div class="celda"></div>
+        </td>
+      </tr>
     </tbody>
-</table>
+  </table>

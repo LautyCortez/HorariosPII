@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DIAS_SEMANA, HORAS } from '../horario.model';
+import { DIAS_SEMANA, HORAS } from '../../horario.model';
 
 @Component({
   selector: 'app-horario-grilla',
