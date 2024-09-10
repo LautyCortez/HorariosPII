@@ -1,6 +1,6 @@
 // horarios.service.ts
 import { Injectable } from '@angular/core';
-import { Horario } from '../horario.model';
+import { Horario } from './models/horario.model';
 
 @Injectable({
   providedIn: 'root'

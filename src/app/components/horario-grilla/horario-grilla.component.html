@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Hora</th>
+            <th *ngFor="let dia of dias">{{ dia }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fila of horarioMaterias">
+            <td>{{ fila.hora }}</td>
+            <td>{{ fila.lunes }}</td>
+            <td>{{ fila.martes }}</td>
+            <td>{{ fila.miercoles }}</td>
+            <td>{{ fila.jueves }}</td>
+            <td>{{ fila.viernes }}</td> 
+        </tr>
+    </tbody>
+</table>

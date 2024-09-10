@@ -5,21 +5,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialComponent } from './material/material.component';
-import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { MaterialComponent } from './components/material/material.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatListModule } from '@angular/material/list';
-import { HorariosComponent } from './horarios/horarios.component';
-import { AdministrarMateriasComponent } from './administrar-materias/administrar-materias.component';
-import { ConvertidorFechasComponent } from './convertidor-fechas/convertidor-fechas.component';
-import { HorarioTableComponent } from './horario-table/horario-table.component';
+import { HorariosComponent } from './components/horarios/horarios.component';
+import { AdministrarMateriasComponent } from './components/administrar-materias/administrar-materias.component';
+import { ConvertidorFechasComponent } from './components/convertidor-fechas/convertidor-fechas.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HorarioGrillaComponent } from './components/horario-grilla/horario-grilla.component';
+
 
 
 
@@ -33,7 +35,7 @@ import { MatOptionModule } from '@angular/material/core';
     HorariosComponent,
     AdministrarMateriasComponent,
     ConvertidorFechasComponent,
-    HorarioTableComponent,
+    HorarioGrillaComponent,
     
   ],
   imports: [
@@ -48,7 +50,8 @@ import { MatOptionModule } from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,3 @@
-// sidebar.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,7 +10,8 @@ export class SidebarComponent {
     'Programacion II',
     'Bases de Datos',
     'Redes y Comunicacion',
-    'Derecho y Legilacion Laboral',
-    'Practicas Profecionalizantes'
+    'Derecho y Legislacion Laboral', 
+    'Practicas Profesionalizantes',
+    'Gestion de Proyectos'
   ];
 }

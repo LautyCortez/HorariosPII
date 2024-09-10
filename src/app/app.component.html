@@ -1,15 +1,31 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
-<!-- app.component.html o main-section.component.html -->
-<div class="section-content">
-    <router-outlet>
-        
-    </router-outlet> <!-- Aquí se cargan las secciones -->
-  </div>
-<app-horarios></app-horarios>
-<app-horario-table></app-horario-table>
-<app-administrar-materias></app-administrar-materias>
-<app-convertidor-fechas></app-convertidor-fechas>
-<app-material></app-material>
+<mat-sidenav-container class="sidenav-container">
+    
+  
+  <mat-sidenav #sidenav mode="over">
+    <app-sidebar></app-sidebar> 
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Materias</span>
+    </mat-toolbar>
+
+    <div class="main-content">
+      <router-outlet>
+      <app-horarios></app-horarios>
+      <app-administrar-materias></app-administrar-materias>
+      <app-convertidor-fechas></app-convertidor-fechas>
+      <app-material></app-material>
+      <app-horario-grilla></app-horario-grilla>
+      </router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
 

@@ -1,9 +1,27 @@
-/* app.component.css o main-section.component.css */
+ 
+.sidenav-container {
+  height: 100%;  
+}
+
+mat-sidenav {
+  width: 250px; 
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ca3120;
+  color: #ca3120;
+}
+
+
 .section-content {
+  background-color: #ca3120;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Para centrar verticalmente */
+    height: 100vh; 
     text-align: center;
   }
-  
+ 
