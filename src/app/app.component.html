@@ -1,15 +1,15 @@
-<app-header></app-header>
-<app-navbar></app-navbar>
 <mat-sidenav-container class="sidenav-container">
-    
-  
   <mat-sidenav #sidenav mode="over">
     <app-sidebar></app-sidebar> 
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <app-header></app-header>
+<app-navbar></app-navbar>
     <mat-toolbar>
+      
       <button mat-icon-button (click)="sidenav.toggle()">
+        
         <mat-icon>menu</mat-icon>
       </button>
       <span>Materias</span>
@@ -17,10 +17,8 @@
 
     <div class="main-content">
       <router-outlet>
-      <app-horarios></app-horarios>
       <app-administrar-materias></app-administrar-materias>
       <app-convertidor-fechas></app-convertidor-fechas>
-      <app-material></app-material>
       <app-horario-grilla></app-horario-grilla>
       </router-outlet>
     </div>
