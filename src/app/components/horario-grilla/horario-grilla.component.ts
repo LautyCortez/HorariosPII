@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DIAS_SEMANA, HORAS, HORARIO_MATERIAS } from '../../models/horario-grilla.model';
 
 @Component({
   selector: 'app-horario-grilla',
@@ -7,7 +6,9 @@ import { DIAS_SEMANA, HORAS, HORARIO_MATERIAS } from '../../models/horario-grill
   styleUrls: ['./horario-grilla.component.css']
 })
 export class HorarioGrillaComponent {
-  dias = DIAS_SEMANA;  
-  horas = HORAS;  
-  horarioMaterias = HORARIO_MATERIAS;  
+  selectedDay: string = 'todos';
+
+  onDaySelected(dia: string): void {
+    this.selectedDay = dia;
+  }
 }

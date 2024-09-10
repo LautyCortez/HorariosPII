@@ -1,18 +1,15 @@
-<table>
-    <thead>
-        <tr>
-            <th>Hora</th>
-            <th *ngFor="let dia of dias">{{ dia }}</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let fila of horarioMaterias">
-            <td>{{ fila.hora }}</td>
-            <td>{{ fila.lunes }}</td>
-            <td>{{ fila.martes }}</td>
-            <td>{{ fila.miercoles }}</td>
-            <td>{{ fila.jueves }}</td>
-            <td>{{ fila.viernes }}</td> 
-        </tr>
-    </tbody>
-</table>
+<h2>Seleccione los horarios que desea visualizar</h2>
+
+<mat-form-field>
+  <mat-label>Día</mat-label>
+  <mat-select [(value)]="selectedDay" (selectionChange)="onDaySelected($event.value)">
+    <mat-option value="todos">Todos los días</mat-option>
+    <mat-option value="lunes">Lunes</mat-option>
+    <mat-option value="martes">Martes</mat-option>
+    <mat-option value="miercoles">Miércoles</mat-option>
+    <mat-option value="jueves">Jueves</mat-option>
+    <mat-option value="viernes">Viernes</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<app-horario-tabla [diaSeleccionado]="selectedDay"></app-horario-tabla>

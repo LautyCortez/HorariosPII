@@ -4,26 +4,20 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <app-header></app-header>
-<app-navbar></app-navbar>
     <mat-toolbar>
-      
       <button mat-icon-button (click)="sidenav.toggle()">
-        
         <mat-icon>menu</mat-icon>
       </button>
       <span>Materias</span>
     </mat-toolbar>
+    <app-header></app-header>
+    <app-navbar></app-navbar>
 
     <div class="main-content">
       <router-outlet>
-      <app-administrar-materias></app-administrar-materias>
-      <app-convertidor-fechas></app-convertidor-fechas>
-      <app-horario-grilla></app-horario-grilla>
       </router-outlet>
     </div>
+    
+    <app-footer></app-footer>
   </mat-sidenav-content>
-
 </mat-sidenav-container>
-
-

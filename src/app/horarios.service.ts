@@ -1,25 +1,45 @@
-// horarios.service.ts
 import { Injectable } from '@angular/core';
-import { Horario } from './models/horario.model';
+import { Observable, of } from 'rxjs';
+
+export interface Horario {
+  hora: string;
+  lunes?: string;
+  martes?: string;
+  miercoles?: string;
+  jueves?: string;
+  viernes?: string;
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class HorariosService {
-  private horariosMaterias: Horario[] = [
-    { hora: '8:00 AM', lunes: 'PP 2', martes: '', miercoles: '', jueves: 'Programación 2', viernes: 'Programación 2' },
-    // Agrega más horarios aquí
+export class HorarioService {
+  private horarios: Horario[] = [
+    { hora: '8:00 AM', lunes: 'Practicas Profecionalizantes', martes: 'Derecho y Legislacion Laboral', miercoles: 'Base de Datos', jueves: 'Practicas Profecionalizantes', viernes: '' },
+    { hora: '8:40 AM', lunes: 'Practicas Profecionalizantes', martes: 'Derecho y Legislacion Laboral', miercoles: 'Base de Datos', jueves: 'Practicas Profecionalizantes', viernes: 'Gestion de Proyectos' },
+    { hora: '9:20 AM', lunes: 'Practicas Profecionalizantes', martes: 'Derecho y Legislacion Laboral', miercoles: 'Base de Datos', jueves: 'Practicas Profecionalizantes', viernes: 'Gestion de Proyectos' },
+    { hora: '10:00 AM', lunes: 'Redes y Comunicacion', martes: 'Programacion II', miercoles: '', jueves: 'Programacion II', viernes: 'Gestion de Proyectos' },
+    { hora: '10:40 AM', lunes: 'Redes y Comunicacion', martes: 'Programacion II', miercoles: '', jueves: 'Programacion II', viernes: 'Gestion de Proyectos' },
+    { hora: '11:20 AM', lunes: 'Redes y Comunicacion', martes: 'Programacion II', miercoles: '', jueves: 'Programacion II', viernes: '' },
+    { hora: '12:00 PM', lunes: 'Redes y Comunicacion', martes: 'Programacion II', miercoles: '', jueves: 'Programacion II', viernes: '' }
   ];
 
-  obtenerHorarios(): Horario[] {
-    return this.horariosMaterias;
+  getHorarios(): Observable<Horario[]> {
+    return of(this.horarios);
+  }
+
+  getHorariosPorDia(dia: string): Observable<Horario[]> {
+    if (dia === 'todos') {
+      return of(this.horarios);
+    }
+    return of(this.horarios.map(horario => ({ hora: horario.hora, [dia]: horario[dia as keyof Horario] })));
   }
 
   agregarHorario(horario: Horario): number {
     if (horario) {
-      this.horariosMaterias.push(horario);
-      return 1; // Éxito
+      this.horarios.push(horario);
+      return 1;
     }
-    return -1; // Error
+    return -1;
   }
 }

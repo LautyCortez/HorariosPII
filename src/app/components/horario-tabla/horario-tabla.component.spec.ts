@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HorarioTableComponent } from './horario-table.component';
+import { HorarioTablaComponent } from './horario-tabla.component';
 
 describe('HorarioTableComponent', () => {
-  let component: HorarioTableComponent;
-  let fixture: ComponentFixture<HorarioTableComponent>;
+  let component: HorarioTablaComponent;
+  let fixture: ComponentFixture<HorarioTablaComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HorarioTableComponent]
+      declarations: [HorarioTablaComponent]
     });
-    fixture = TestBed.createComponent(HorarioTableComponent);
+    fixture = TestBed.createComponent(HorarioTablaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

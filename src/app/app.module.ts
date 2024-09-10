@@ -21,6 +21,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HorarioGrillaComponent } from './components/horario-grilla/horario-grilla.component';
+import { HorarioTablaComponent } from './components/horario-tabla/horario-tabla.component';
+import { HorarioService } from '././horarios.service';
+import { AgregarHorarioComponent } from './components/agregar-horario/agregar-horario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';  // Importa FormsModule y ReactiveFormsModule
+
+
 
 
 
@@ -36,7 +43,9 @@ import { HorarioGrillaComponent } from './components/horario-grilla/horario-gril
     AdministrarMateriasComponent,
     ConvertidorFechasComponent,
     HorarioGrillaComponent,
-    
+    HorarioTablaComponent,
+    AgregarHorarioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +60,11 @@ import { HorarioGrillaComponent } from './components/horario-grilla/horario-gril
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HorarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

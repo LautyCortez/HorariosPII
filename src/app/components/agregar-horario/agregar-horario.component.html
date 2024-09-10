@@ -1,0 +1,20 @@
+<!-- src/app/components/agregar-horario/agregar-horario.component.html -->
+<form (ngSubmit)="onSubmit()" #horarioForm="ngForm">
+    <mat-form-field>
+        <mat-label>Horario</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.hora" name="hora" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Lunes</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.lunes" name="lunes">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Martes</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.martes" name="martes">
+    </mat-form-field>
+
+    <button mat-button type="submit" [disabled]="!horarioForm.form.valid">Guardar Horario</button>
+    <button mat-button type="button" (click)="borrarCampos()">Borrar Campos</button>
+</form>
