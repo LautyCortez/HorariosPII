@@ -1,22 +1,23 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="over">
-    <app-sidebar></app-sidebar> 
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side">
+    <app-sidebar></app-sidebar>
   </mat-sidenav>
 
+  <!-- Contenido principal -->
   <mat-sidenav-content>
-    <mat-toolbar>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Materias</span>
-    </mat-toolbar>
-    <app-header></app-header>
+    <!-- Header: le pasamos la referencia del sidenav -->
+    <app-header [sidenav]="sidenav"></app-header>
+
+    <!-- Navbar -->
     <app-navbar></app-navbar>
+
+    <!-- Contenido dinámico -->
     <div class="main-content">
-      <router-outlet>
-      </router-outlet>
+      <router-outlet></router-outlet>
     </div>
-    
+
+    <!-- Pie de página -->
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

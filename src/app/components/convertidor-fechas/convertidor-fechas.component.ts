@@ -6,23 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./convertidor-fechas.component.css']
 })
 export class ConvertidorFechasComponent {
-  
-  convertirFechaString(fecha: Date): string {
-    const year = fecha.getFullYear();
-    const month = ('0' + (fecha.getMonth() + 1)).slice(-2);
-    const day = ('0' + fecha.getDate()).slice(-2);
-    return `${year}/${month}/${day}`;
+  fechaInput: string = '';
+  tipoConversion: string = '';
+  resultado: string | null = null;
+
+
+  convertirFecha() {
+    if (this.tipoConversion === 'barraAGuion') {
+      this.resultado = this.fechaBarraAGuion(this.fechaInput);
+    } else if (this.tipoConversion === 'guionABarra') {
+      this.resultado = this.fechaGuionABarra(this.fechaInput);
+    } else if (this.tipoConversion === 'string') {
+      this.resultado = this.convertirFechaString(this.fechaInput);
+    }
   }
-  
+
   fechaBarraAGuion(fecha: string): string {
     return fecha.replace(/\//g, '-');
   }
-  
+
   fechaGuionABarra(fecha: string): string {
     return fecha.replace(/-/g, '/');
   }
-  
 
+  convertirFechaString(fecha: string): string {
+    const fechaObj = new Date(fecha);
+    const year = fechaObj.getFullYear();
+    const month = (fechaObj.getMonth() + 1).toString().padStart(2, '0');
+    const day = fechaObj.getDate().toString().padStart(2, '0');
+    return `${year}/${month}/${day}`;
+  }
 }
-
-

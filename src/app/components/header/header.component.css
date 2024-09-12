@@ -1,8 +1,9 @@
 .header-title {
     flex: 1;
     text-align: center;
-    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.2rem;
     color: #ca3120;
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 4px 0;
 }

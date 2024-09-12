@@ -1,6 +1,6 @@
-<mat-toolbar>
-    <button mat-icon-button [routerLink]="['/']" matTooltip="Inicio">
-        <mat-icon>home</mat-icon>
+<mat-toolbar color="Primary">
+    <button mat-icon-button (click)="sidenav.toggle()" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
     </button>
-    <span class="header-title">Horarios de cursado 3° año turno mañana</span>
+    <span class="header-title">Horarios 3º Año Turno Mañana</span>
 </mat-toolbar>

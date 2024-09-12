@@ -1,15 +1,12 @@
-<!-- src/app/horario-grilla/horario-grilla.component.html -->
-<h2>Horarios Generales</h2>
+<h2>Grilla Horaria General</h2>
 
-<!-- Tabla que muestra los horarios -->
+
 <table mat-table [dataSource]="horarios" class="mat-elevation-z8">
-    <!-- Columna Hora -->
     <ng-container matColumnDef="hora">
         <th mat-header-cell *matHeaderCellDef> Hora </th>
         <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
     </ng-container>
 
-    <!-- Columnas de los días -->
     <ng-container matColumnDef="lunes">
         <th mat-header-cell *matHeaderCellDef> Lunes </th>
         <td mat-cell *matCellDef="let element"> {{element.lunes || '-' }} </td>

@@ -1,0 +1,25 @@
+<h2>Convertidor de Fechas</h2>
+
+<form (ngSubmit)="convertirFecha()">
+    <mat-form-field>
+        <mat-label>Fecha</mat-label>
+        <input matInput [(ngModel)]="fechaInput" name="fechaInput" placeholder="AAAA/MM/DD o AAAA-MM-DD" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Tipo de conversión</mat-label>
+        <mat-select [(ngModel)]="tipoConversion" name="tipoConversion" required>
+            <mat-option value="barraAGuion">Convertir de barra a guion (AAAA/MM/DD → AAAA-MM-DD)</mat-option>
+            <mat-option value="guionABarra">Convertir de guion a barra (AAAA-MM-DD → AAAA/MM/DD)</mat-option>
+            <mat-option value="string">Convertir fecha a string</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-button type="submit">Convertir</button>
+</form>
+
+<!-- Resultado de la conversión -->
+<div *ngIf="resultado">
+    <h3>Resultado:</h3>
+    <p>{{ resultado }}</p>
+</div>

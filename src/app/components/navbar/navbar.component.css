@@ -1,8 +1,4 @@
-/* src/app/navbar/navbar.component.css */
-.active-link {
-    color: #3f51b5;  /* Color azul para el enlace activo */
-    font-weight: bold;  /* Resalta el enlace activo */
-  }
+
   
   mat-toolbar a {
     color: #000000;
