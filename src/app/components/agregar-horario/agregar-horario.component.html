@@ -15,6 +15,22 @@
         <input matInput [(ngModel)]="nuevoHorario.martes" name="martes">
     </mat-form-field>
 
+    <mat-form-field>
+        <mat-label>Miercoles</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.miercoles" name="miercoles">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Jueves</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.jueves" name="jueves">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Viernes</mat-label>
+        <input matInput [(ngModel)]="nuevoHorario.viernes" name="viernes">
+    </mat-form-field>
+
     <button mat-button type="submit" [disabled]="!horarioForm.form.valid">Guardar Horario</button>
     <button mat-button type="button" (click)="borrarCampos()">Borrar Campos</button>
 </form>
+
