@@ -1,3 +1,13 @@
-mat-list-item {
-    border-bottom: 1px solid #ccc;
-}
+.mat-nav-list {
+    background-color: #ca3120;  
+    color: white;
+  }
+  
+  .mat-list-item {
+    color: white; 
+  }
+  
+  .mat-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
