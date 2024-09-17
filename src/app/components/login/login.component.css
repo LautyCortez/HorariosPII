@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .login-card {
-    width: 400px;
-    padding: 20px;
+    width: 480px;
+    padding: 30px;
 }
 
 .mat-card-title {
@@ -18,4 +18,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+mat-form-field{
+
+    width: 100%;
+
 }
