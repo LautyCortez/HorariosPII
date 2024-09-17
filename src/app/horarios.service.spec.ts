@@ -1,4 +1,3 @@
-// horario.model.ts
 export interface Horario {
   hora: string; 
   lunes: string;

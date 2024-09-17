@@ -4,16 +4,19 @@ import { HorarioGrillaComponent } from './components/horario-grilla/horario-gril
 import { ConvertidorFechasComponent } from './components/convertidor-fechas/convertidor-fechas.component';
 import { AgregarHorarioComponent } from './components/agregar-horario/agregar-horario.component';
 import { HorariosComponent } from './components/horarios/horarios.component';
+import { LautaroGuard } from './lautaro.guard';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
   { path: '', component: HorariosComponent },
   { path: 'horario-grilla', component: HorarioGrillaComponent },
   { path: 'horario', component: HorariosComponent },
-  { path: 'agregar-horario', component: AgregarHorarioComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'agregar-horario', component: AgregarHorarioComponent },
   { path: 'convertidor-fechas', component: ConvertidorFechasComponent },
   { path: '', redirectTo: '/horario', pathMatch: 'full' },
-  { path: '**', redirectTo: '' } 
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -10,7 +10,7 @@ export class HorariosComponent implements OnInit {
   horarios: Horario[] = [];
   displayedColumns: string[] = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
 
-  constructor(private horarioService: HorarioService) {}
+  constructor(private horarioService: HorarioService) { }
 
   ngOnInit(): void {
     this.cargarHorarios();

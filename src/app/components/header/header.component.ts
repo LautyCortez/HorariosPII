@@ -7,5 +7,5 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HeaderComponent {
 
-  @Input() sidenav!: MatSidenav; 
+  @Input() sidenav!: MatSidenav;
 }

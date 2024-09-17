@@ -46,9 +46,9 @@ export class HorarioService {
   eliminarHorario(hora: string): number {
     const index = this.horarios.findIndex(h => h.hora === hora);
     if (index !== -1) {
-      this.horarios.splice(index, 1); 
+      this.horarios.splice(index, 1);
       return 1;
     }
-    return -1; 
-}
+    return -1;
+  }
 }

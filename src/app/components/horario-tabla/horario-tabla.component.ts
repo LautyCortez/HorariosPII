@@ -12,7 +12,7 @@ export class HorarioTablaComponent implements OnChanges {
   horarios: Horario[] = [];
   displayedColumns: string[] = ['hora', 'materia'];
 
-  constructor(private horarioService: HorarioService) {}
+  constructor(private horarioService: HorarioService) { }
 
   ngOnChanges(): void {
     this.cargarHorarios();

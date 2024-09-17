@@ -7,11 +7,11 @@ import { HorarioService, Horario } from '../../horarios.service';
   styleUrls: ['./horario-grilla.component.css']
 })
 export class HorarioGrillaComponent implements OnInit {
-  selectedDay: string = 'todos';  
+  selectedDay: string = 'todos';
   horarios: Horario[] = [];
-  displayedColumns: string[] = ['hora'];  
+  displayedColumns: string[] = ['hora'];
 
-  constructor(private horarioService: HorarioService) {}
+  constructor(private horarioService: HorarioService) { }
 
   ngOnInit(): void {
     this.cargarHorarios();
@@ -31,9 +31,9 @@ export class HorarioGrillaComponent implements OnInit {
 
   updateDisplayedColumns(): void {
     if (this.selectedDay === 'todos') {
-      this.displayedColumns = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes']; 
+      this.displayedColumns = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
     } else {
-      this.displayedColumns = ['hora', this.selectedDay]; 
+      this.displayedColumns = ['hora', this.selectedDay];
     }
   }
 }

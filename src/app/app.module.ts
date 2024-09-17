@@ -25,7 +25,9 @@ import { HorarioTablaComponent } from './components/horario-tabla/horario-tabla.
 import { HorarioService } from '././horarios.service';
 import { AgregarHorarioComponent } from './components/agregar-horario/agregar-horario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './components/footer/footer.component'; 
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -45,7 +47,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HorarioGrillaComponent,
     HorarioTablaComponent,
     AgregarHorarioComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatOptionModule,
     MatSidenavModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [HorarioService],
   bootstrap: [AppComponent]
