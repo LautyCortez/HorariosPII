@@ -1,4 +1,3 @@
-// src/app/horario-grilla/horario-grilla.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HorarioService, Horario } from '../../horarios.service';
 
@@ -8,9 +7,9 @@ import { HorarioService, Horario } from '../../horarios.service';
   styleUrls: ['./horario-grilla.component.css']
 })
 export class HorarioGrillaComponent implements OnInit {
-  selectedDay: string = 'todos';  // Mostrar todos los días por defecto
+  selectedDay: string = 'todos';  
   horarios: Horario[] = [];
-  displayedColumns: string[] = ['hora'];  // Siempre muestra la columna de 'hora'
+  displayedColumns: string[] = ['hora'];  
 
   constructor(private horarioService: HorarioService) {}
 
@@ -32,9 +31,9 @@ export class HorarioGrillaComponent implements OnInit {
 
   updateDisplayedColumns(): void {
     if (this.selectedDay === 'todos') {
-      this.displayedColumns = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes'];  // Muestra todas las columnas
+      this.displayedColumns = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes']; 
     } else {
-      this.displayedColumns = ['hora', this.selectedDay];  // Muestra solo la columna del día seleccionado
+      this.displayedColumns = ['hora', this.selectedDay]; 
     }
   }
 }

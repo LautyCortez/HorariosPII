@@ -25,7 +25,7 @@ import { HorarioTablaComponent } from './components/horario-tabla/horario-tabla.
 import { HorarioService } from '././horarios.service';
 import { AgregarHorarioComponent } from './components/agregar-horario/agregar-horario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './components/footer/footer.component';  // Importa FormsModule y ReactiveFormsModule
+import { FooterComponent } from './components/footer/footer.component'; 
 
 
 

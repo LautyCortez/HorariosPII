@@ -9,6 +9,11 @@
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 
+.footer p {
+
+    justify-content: center;
+
+}
 .footer-content {
     text-align: center;
 }

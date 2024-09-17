@@ -1,9 +1,9 @@
 .sidenav-container {
-  height: 100%;  
+  height: 100%;
 }
 
 mat-sidenav {
-  width: 300px; 
+  width: 300px;
 }
 
 mat-toolbar {
@@ -17,10 +17,9 @@ mat-toolbar {
 
 .section-content {
   background-color: #ca3120;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    text-align: center;
-  }
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}

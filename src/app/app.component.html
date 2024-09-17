@@ -1,23 +1,17 @@
 <mat-sidenav-container class="sidenav-container">
-  <!-- Sidebar -->
   <mat-sidenav #sidenav mode="side">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 
-  <!-- Contenido principal -->
   <mat-sidenav-content>
-    <!-- Header: le pasamos la referencia del sidenav -->
     <app-header [sidenav]="sidenav"></app-header>
 
-    <!-- Navbar -->
     <app-navbar></app-navbar>
 
-    <!-- Contenido dinámico -->
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
 
-    <!-- Pie de página -->
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

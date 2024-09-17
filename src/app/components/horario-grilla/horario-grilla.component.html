@@ -1,4 +1,3 @@
-<!-- src/app/horario-grilla/horario-grilla.component.html -->
 <h2>Seleccione los horarios que desea visualizar</h2>
 
 <mat-form-field>
@@ -13,9 +12,7 @@
   </mat-select>
 </mat-form-field>
 
-<!-- Tabla que muestra los horarios -->
 <table mat-table [dataSource]="horarios" class="mat-elevation-z8">
-  <!-- Columna Hora -->
   <ng-container matColumnDef="hora">
     <th mat-header-cell *matHeaderCellDef> Hora </th>
     <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
@@ -44,7 +41,6 @@
     </ng-container>
   </ng-container>
 
-  <!-- Solo muestra la columna del día seleccionado si no es 'todos' -->
   <ng-container *ngIf="selectedDay !== 'todos'" matColumnDef="{{selectedDay}}">
     <th mat-header-cell *matHeaderCellDef> {{ selectedDay | titlecase }} </th>
     <td mat-cell *matCellDef="let element"> {{element[selectedDay] || '-' }} </td>

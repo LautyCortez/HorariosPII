@@ -1,4 +1,3 @@
-// src/app/horarios/horarios.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HorarioService, Horario } from '../../horarios.service';
 
